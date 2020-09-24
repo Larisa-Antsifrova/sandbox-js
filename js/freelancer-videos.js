@@ -11,6 +11,11 @@ let userName = "Vasya";
 user = userName;
 console.log(user);
 
+if (true) {
+  var size = 5;
+}
+console.log(size);
+
 console.log("Freelancer. Video 4.");
 let userSize = "45" / "8";
 console.log(typeof userSize);
