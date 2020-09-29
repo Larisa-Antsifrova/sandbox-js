@@ -279,3 +279,15 @@ console.log(addLogin(logins, "Zod"));
 
 console.log(addLogin(logins, "jqueryisextremelyfast"));
 // 'Ошибка! Логин должен быть от 4 до 16 символов'
+
+
+// Task 5 normal
+
+function checkForSpam (str) { 
+  'use strict';
+  // Write code under this line
+  if (str.toLowerCase().includes('spam') || str.toLowerCase().includes('sale')) {
+  return true;
+  }
+  return false;
+}
