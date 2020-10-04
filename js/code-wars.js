@@ -7,15 +7,15 @@
 
 // Вторая задача - https://www.codewars.com/kata/554b4ac871d6813a03000035/train/javascript
 
-function highAndLow(numbers) {
-  let allNumbers = numbers.split(" ");
+// function highAndLow(numbers) {
+//   let allNumbers = numbers.split(" ");
 
-  for (let i = 0; i < allNumbers.length; i++) {
-    allNumbers[i] = Number(allNumbers[i]);
-  }
+//   for (let i = 0; i < allNumbers.length; i++) {
+//     allNumbers[i] = Number(allNumbers[i]);
+//   }
 
-  return `${Math.max(...allNumbers)} ${Math.min(...allNumbers)}`;
-}
+//   return `${Math.max(...allNumbers)} ${Math.min(...allNumbers)}`;
+// }
 
 // Вторая задача - решение другого разработчика :)
 
@@ -24,8 +24,8 @@ function highAndLow(numbers) {
 //   return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
 // }
 
-console.log(highAndLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6"));
-console.log(highAndLow("1 1"));
+// console.log(highAndLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6"));
+// console.log(highAndLow("1 1"));
 
 // Третья задача - https://www.codewars.com/kata/5168bb5dfe9a00b126000018/train/javascript
 
@@ -61,3 +61,26 @@ console.log(highAndLow("1 1"));
 // console.log((isDivideBy(45, 5, 15), true));
 // console.log((isDivideBy(4, 1, 4), true));
 // console.log((isDivideBy(15, -5, 3), true));
+
+// Шестая задача - https://www.codewars.com/kata/545cedaa9943f7fe7b000048
+const isPangram = (string) => {
+  let stringLowCase = string.toLowerCase();
+  let abc = "abcdefghijklmnopqrstuvwxyz";
+  let counter = 0;
+  for (let letter of abc) {
+    if (stringLowCase.includes(letter)) {
+      continue;
+    } else {
+      counter += 1;
+    }
+  }
+  if (counter > 0) {
+    return false;
+  } else {
+    return true;
+  }
+};
+
+console.log(isPangram("The quick brown fox jumps over the lazy dog."));
+console.log(isPangram("This is not a pangram."));
+console.log(isPangram("Bears do not eat cuctai"));
