@@ -41,22 +41,22 @@ mood : happy
 
 // Task 3
 // Variant 1
-// const findBestEmployee = function (employees) {
-//   let justStats = Object.values(employees);
-//   let bestStats = Math.max(...justStats);
-//   let bestEmployeeName;
+const findBestEmployee = function (employees) {
+  let justStats = Object.values(employees);
+  let bestStats = Math.max(...justStats);
+  let bestEmployeeName = "";
 
-//   if (Object.keys(employees).length === 0) {
-//     return "";
-//   }
+  // if (Object.keys(employees).length === 0) {
+  //   return "";
+  // }
 
-//   for (const key in employees) {
-//     if (employees[key] === bestStats) {
-//       bestEmployeeName = key;
-//     }
-//   }
-//   return bestEmployeeName;
-// };
+  for (const key in employees) {
+    if (employees[key] === bestStats) {
+      bestEmployeeName = key;
+    }
+  }
+  return bestEmployeeName;
+};
 
 // Variant 2
 // const findBestEmployee = function (employees) {
@@ -77,32 +77,32 @@ mood : happy
 //   return bestEmployeeName;
 // };
 
-// // Объекты и ожидаемый результат
-// const developers = {
-//   ann: 29,
-//   david: 35,
-//   helen: 1,
-//   lorence: 99,
-// };
-// console.log(findBestEmployee(developers));
-// // 'lorence'
+// Объекты и ожидаемый результат
+const developers = {
+  ann: 29,
+  david: 35,
+  helen: 1,
+  lorence: 99,
+};
+console.log(findBestEmployee(developers));
+// 'lorence'
 
-// const supports = {
-//   poly: 12,
-//   mango: 17,
-//   ajax: 4,
-// };
-// console.log(findBestEmployee(supports));
-// // 'mango'
+const supports = {
+  poly: 12,
+  mango: 17,
+  ajax: 4,
+};
+console.log(findBestEmployee(supports));
+// 'mango'
 
-// const sellers = {
-//   lux: 147,
-//   david: 21,
-//   kiwi: 19,
-//   chelsy: 38,
-// };
-// console.log(findBestEmployee(sellers));
-// // 'lux'
+const sellers = {
+  lux: 147,
+  david: 21,
+  kiwi: 19,
+  chelsy: 38,
+};
+console.log(findBestEmployee(sellers));
+// 'lux'
 
 // const empty = {};
 // console.log(findBestEmployee(empty));
@@ -176,37 +176,37 @@ mood : happy
 // //  []
 
 // Task 6
-function calculateTotalPrice(array, prop) {
-  let total = 0;
+// function calculateTotalPrice(array, prop) {
+//   let total = 0;
 
-  for (const item of array) {
-    if (item.name === prop) {
-      total += item.price * item.quantity;
-    }
-  }
+//   for (const item of array) {
+//     if (item.name === prop) {
+//       total += item.price * item.quantity;
+//     }
+//   }
 
-  return total;
-}
+//   return total;
+// }
 
-// Объекты и ожидаемый результат
-const products = [
-  { name: "Радар", price: 1300, quantity: 4 },
-  { name: "Радар", price: 1280, quantity: 2 },
-  { name: "Радар", price: 1320, quantity: 1 },
-  { name: "Сканер", price: 2700, quantity: 1 },
-  { name: "Сканер", price: 2500, quantity: 3 },
-  { name: "Дроид", price: 400, quantity: 7 },
-  { name: "Захват", price: 1200, quantity: 2 },
-];
+// // Объекты и ожидаемый результат
+// const products = [
+//   { name: "Радар", price: 1300, quantity: 4 },
+//   { name: "Радар", price: 1280, quantity: 2 },
+//   { name: "Радар", price: 1320, quantity: 1 },
+//   { name: "Сканер", price: 2700, quantity: 1 },
+//   { name: "Сканер", price: 2500, quantity: 3 },
+//   { name: "Дроид", price: 400, quantity: 7 },
+//   { name: "Захват", price: 1200, quantity: 2 },
+// ];
 
-console.log(calculateTotalPrice(products, "Радар"));
-// 9080
+// console.log(calculateTotalPrice(products, "Радар"));
+// // 9080
 
-console.log(calculateTotalPrice(products, "Сканер"));
-// 10200
+// console.log(calculateTotalPrice(products, "Сканер"));
+// // 10200
 
-console.log(calculateTotalPrice(products, "Захват"));
-// 2400
+// console.log(calculateTotalPrice(products, "Захват"));
+// // 2400
 
-//console.log(calculateTotalPrice(products, 'Дроид'));
-// 2800
+// console.log(calculateTotalPrice(products, 'Дроид'));
+// // 2800
