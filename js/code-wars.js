@@ -63,24 +63,58 @@
 // console.log((isDivideBy(15, -5, 3), true));
 
 // Шестая задача - https://www.codewars.com/kata/545cedaa9943f7fe7b000048
-const isPangram = (string) => {
-  let stringLowCase = string.toLowerCase();
-  let abc = "abcdefghijklmnopqrstuvwxyz";
-  let counter = 0;
-  for (let letter of abc) {
-    if (stringLowCase.includes(letter)) {
-      continue;
-    } else {
-      counter += 1;
-    }
-  }
-  if (counter > 0) {
-    return false;
-  } else {
-    return true;
-  }
-};
+// const isPangram = (string) => {
+//   let stringLowCase = string.toLowerCase();
+//   let abc = "abcdefghijklmnopqrstuvwxyz";
+//   let counter = 0;
+//   for (let letter of abc) {
+//     if (stringLowCase.includes(letter)) {
+//       continue;
+//     } else {
+//       counter += 1;
+//     }
+//   }
+//   if (counter > 0) {
+//     return false;
+//   } else {
+//     return true;
+//   }
+// };
 
-console.log(isPangram("The quick brown fox jumps over the lazy dog."));
-console.log(isPangram("This is not a pangram."));
-console.log(isPangram("Bears do not eat cuctai"));
+// console.log(isPangram("The quick brown fox jumps over the lazy dog."));
+// console.log(isPangram("This is not a pangram."));
+// console.log(isPangram("Bears do not eat cuctai"));
+
+// Седьмая задача - https://www.codewars.com/kata/5259b20d6021e9e14c0010d4/train/javascript
+
+// function reverseWords(str) {
+//   let words = str.split(" ");
+
+//   for (let i = 0; i < words.length; i++) {
+//     words[i] = words[i].split("").reverse().join("");
+//   }
+
+//   return words.join(" ");
+// }
+
+// Solution of another developer. Beautiful.
+// function reverseWords(str) {
+//   return str.split("").reverse().join("").split(" ").reverse().join(" ");
+// }
+
+// console.log(reverseWords("The quick brown fox jumps over the lazy dog."));
+// console.log(reverseWords("apple"));
+// console.log(reverseWords("a b c d"));
+// console.log(reverseWords("double  spaced  words"));
+
+// Восьмая задача - https://www.codewars.com/kata/56606694ec01347ce800001b/train/javascript
+
+// function isTriangle(a, b, c) {
+//   if (a + b > c && b + c > a && a + c > b) {
+//     return true;
+//   }
+//   return false;
+// }
+
+// console.log(isTriangle(1, 2, 2)); //true
+// console.log(isTriangle(7, 2, 2)); //false
