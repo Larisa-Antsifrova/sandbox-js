@@ -163,3 +163,125 @@ const copaDelReyGoals = 5;
 
 // const totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals;
 // console.log(totalGoals);
+
+// Четырнадцатая задача - https://www.codewars.com/kata/562926c855ca9fdc4800005b/train/javascript
+
+function numberToPower(number, power) {
+  let result = 1;
+
+  for (let i = 0; i < power; i++) {
+    result *= number;
+    console.log(result);
+  }
+  return result;
+}
+
+// console.log(numberToPower(4, 2)); // 16
+// console.log(numberToPower(10, 4)); // 10000
+// console.log(numberToPower(10, 0)); // 1
+
+// Пятнадцатая задача - https://www.codewars.com/kata/5467e4d82edf8bbf40000155/train/javascript
+function descendingOrder(n) {
+  return Number(n.toString().split("").sort().reverse().join(""));
+}
+
+// console.log(descendingOrder(0)); // 0
+// console.log(descendingOrder(1)); // 1
+// console.log(descendingOrder(123456789)); // 987654321
+// console.log(descendingOrder(1012)); //2110
+
+// Шестнадцатая задача - https://www.codewars.com/kata/5f55ecd770692e001484af7d/train/javascript
+function mirror(data) {
+  let sortedArray = [...data].sort((a, b) => a - b);
+  return [...sortedArray, ...sortedArray.slice(0, -1).reverse()];
+}
+
+// console.log(mirror([2, -3, 1]));
+// console.log(mirror([-8, 42, 18, 0, -16]));
+
+// Семнадцатая задача - https://www.codewars.com/kata/515e188a311df01cba000003/train/javascript
+function getPlanetName(id) {
+  var name;
+  switch (id) {
+    case 1:
+      name = "Mercury";
+      break;
+    case 2:
+      name = "Venus";
+      break;
+    case 3:
+      name = "Earth";
+      break;
+    case 4:
+      name = "Mars";
+      break;
+    case 5:
+      name = "Jupiter";
+      break;
+    case 6:
+      name = "Saturn";
+      break;
+    case 7:
+      name = "Uranus";
+      break;
+    case 8:
+      name = "Neptune";
+      break;
+  }
+
+  return name;
+}
+
+// console.log(getPlanetName(2); // "Venus"
+// console.log(getPlanetName(5); // "Jupiter"
+// console.log(getPlanetName(3); // "Earth"
+
+// Восемнадцатая задача - https://www.codewars.com/kata/58b8c94b7df3f116eb00005b/train/javascript
+function reverseLetter(str) {
+  const abc = "abcdefghijklmnopqrstuvwxyz";
+  let resultArray = [];
+  let reversedArray = str.split("").reverse();
+  for (const item of reversedArray) {
+    if (abc.includes(item)) {
+      resultArray.push(item);
+    } else {
+      continue;
+    }
+  }
+  return resultArray.join("");
+}
+
+// console.log(reverseLetter("krishan")); // "nahsirk"
+// console.log(reverseLetter("ultr53o?n")); // "nortlu"
+// console.log(reverseLetter("ab23c")); // "cba"
+// console.log(reverseLetter("krish21an")); // "nahsirk"
+
+// Девятнадцатая задача - https://www.codewars.com/kata/57a0e5c372292dd76d000d7e/train/javascript
+function repeatStr(n, s) {
+  let result = "";
+  for (let i = 0; i < n; i++) {
+    result += s;
+  }
+  return result;
+}
+
+// console.log(repeatStr(3, "*")); // "***"
+// console.log(repeatStr(5, "#")); // "#####"
+// console.log(repeatStr(2, "ha ")); // "ha ha "
+
+// Двадцатая задача -
+
+function getCount(str) {
+  let vowelsCount = 0;
+  let vowels = "aeiou";
+
+  for (const letter of str) {
+    if (vowels.includes(letter)) {
+      vowelsCount += 1;
+    }
+  }
+
+  return vowelsCount;
+}
+
+// console.log(getCount("abracadabra")); //5
