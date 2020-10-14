@@ -191,10 +191,10 @@ function descendingOrder(n) {
 // console.log(descendingOrder(1012)); //2110
 
 // Шестнадцатая задача - https://www.codewars.com/kata/5f55ecd770692e001484af7d/train/javascript
-function mirror(data) {
-  let sortedArray = [...data].sort((a, b) => a - b);
-  return [...sortedArray, ...sortedArray.slice(0, -1).reverse()];
-}
+// function mirror(data) {
+//   let sortedArray = [...data].sort((a, b) => a - b);
+//   return [...sortedArray, ...sortedArray.slice(0, -1).reverse()];
+// }
 
 // console.log(mirror([2, -3, 1]));
 // console.log(mirror([-8, 42, 18, 0, -16]));
@@ -285,3 +285,283 @@ function getCount(str) {
 }
 
 // console.log(getCount("abracadabra")); //5
+
+// Task number nex - https://www.codewars.com/kata/5b358a1e228d316283001892/train/javascript
+
+function getStrings(city) {
+  let resultObject = {};
+  let result = "";
+
+  for (const letter of city.toLowerCase()) {
+    if (" -'".includes(letter)) {
+      continue;
+    }
+    if (letter in resultObject) {
+      resultObject[letter] += "*";
+    } else {
+      resultObject[letter] = "*";
+    }
+  }
+
+  for (const key in resultObject) {
+    result += `${key}:${resultObject[key]},`;
+  }
+
+  return result.slice(0, -1);
+}
+
+// console.log(getStrings("Chicago")); // "c:**,h:*,i:*,a:*,g:*,o:*"
+// console.log(getStrings("Bangkok")); // "b:*,a:*,n:*,g:*,k:**,o:*"
+// console.log(getStrings("Las Vegas")); // "l:*,a:**,s:**,v:*,e:*,g:*"
+
+const calculateLetters = (word) => {
+  const result = {};
+
+  for (const letter of word.toLowerCase()) {
+    if ("\n .,;!#".includes(letter)) {
+      // '\n' - it's a symbol of line break
+      continue;
+    }
+
+    if (letter in result) {
+      result[letter]++;
+    } else {
+      result[letter] = 1;
+    }
+  }
+
+  return result;
+};
+
+// Task - odd numbers
+
+// function sortArray(array) {
+//   let result = [];
+
+//   for (const item of array) {
+//     if (item % 2 !== 0) {
+//       result.push(item);
+//     }
+//   }
+
+//   result.sort((a, b) => a - b);
+
+//   for (let i = 0; i <= array.length; i++) {
+//     if (array[i] % 2 === 0) {
+//       result.splice(array.indexOf(array[i]), 0, array[i]);
+//     }
+//   }
+
+//   return result;
+// }
+
+// console.log(sortArray([5, 3, 2, 8, 1, 4])); // [1, 3, 2, 8, 5, 4]
+// console.log(sortArray([5, 3, 1, 8, 0])); // [1, 3, 5, 8, 0]
+// console.log(sortArray([])); // []
+// console.log(sortArray([5, 5, 8, 0, 5, 3, 1, 1, 2, 4, 3, 3])); // []
+
+// Task - Singles - https://www.codewars.com/kata/59f11118a5e129e591000134/train/javascript
+function repeats(arr) {
+  let sum = 0;
+  const numbersObject = {};
+
+  for (const item of arr) {
+    if (item in numbersObject) {
+      numbersObject[item] += 1;
+    } else {
+      numbersObject[item] = 1;
+    }
+  }
+
+  for (const key in numbersObject) {
+    if (numbersObject[key] === 1) {
+      sum += +key;
+    }
+  }
+  return sum;
+}
+
+// console.log(repeats([4, 5, 7, 5, 4, 8])); // 15
+// console.log(repeats([9, 10, 19, 13, 19, 13])); // 19
+// console.log(repeats([16, 0, 11, 4, 8, 16, 0, 11])); // 12
+// console.log(repeats([5, 17, 18, 11, 13, 18, 11, 13])); // 22
+// console.log(repeats([5, 10, 19, 13, 10, 13])); // 24
+
+// Task - Binary to Decimal
+
+const binaryArrayToNumber = (arr) => {
+  const reversedArray = arr.slice().reverse();
+  let result = 0;
+
+  for (let i = 0; i < reversedArray.length; i++) {
+    result += reversedArray[i] * Math.pow(2, i);
+  }
+
+  return result;
+};
+
+// Solution of another developer via parseInt (base, radix)
+// const binaryArrayToNumber = (arr) => {
+//   return parseInt(arr.join(""), 2);
+// };
+
+// console.log(binaryArrayToNumber([0, 0, 0, 1])); // 1
+// console.log(binaryArrayToNumber([0, 0, 1, 0])); // 2
+// console.log(binaryArrayToNumber([1, 1, 1, 1])); // 15
+// console.log(binaryArrayToNumber([1, 1, 1, 1, 1, 0, 1, 0])); // 15
+// console.log(binaryArrayToNumber([0, 1, 1, 0])); // 6
+
+// Task - Money, money, money
+
+function calculateYears(principal, interest, tax, desired) {
+  // let resultSum = principal + principal * interest - principal * interest * tax;
+  let resultSum = principal;
+  let years = 0;
+
+  while (resultSum < desired) {
+    years += 1;
+    console.log(years);
+    resultSum = resultSum + resultSum * interest - resultSum * interest * tax;
+    console.log(resultSum);
+  }
+  return years;
+}
+
+// console.log(calculateYears(1000, 0.05, 0.18, 1100)); // 3
+// console.log(calculateYears(1000, 0.01625, 0.18, 1200)); // 14
+// console.log(calculateYears(1000, 0.05, 0.18, 1000)); // 0
+
+// Task - inverted
+
+function invert(array) {
+  let invertedArray = [];
+  for (const item of array) {
+    invertedArray.push(-item);
+  }
+
+  return invertedArray;
+}
+
+// Another developer's solution. Nice
+// function invert(array) {
+//   return array.map((i) => 0 - i);
+// }
+
+// console.log(invert([1, 2, 3, 4, 5])); //[-1,-2,-3,-4,-5]
+// console.log(invert([1, -2, 3, -4, 5])); //[-1,2,-3,4,-5]
+// console.log(invert([])); //[]
+// console.log(invert([0])); //[0]
+
+// Task reduce
+
+function getAverage(marks) {
+  return Math.floor(
+    marks.reduce((accum, value) => accum + value) / marks.length
+  );
+}
+
+// console.log(getAverage([2, 2, 2, 2])); // 2
+// console.log(getAverage([1, 2, 3, 4, 5])); // 3
+// console.log(getAverage([1, 1, 1, 1, 1, 1, 1, 2])); // 1
+// ==============================================================
+
+// Task - ID
+
+function nextId(ids) {
+  let resultID = 0;
+  ids.sort((a, b) => a - b);
+
+  for (let i = 0; i < ids.length; i++) {
+    if (ids[i] !== i && ids.indexOf(i) === -1) {
+      return (resultID = i);
+    } else {
+      resultID = ids.length;
+    }
+  }
+  return resultID;
+}
+
+// Another developer's solution
+// function nextId(ids) {
+//   var x = 0;
+//   while (ids.includes(x)) x++;
+//   return x;
+// }
+
+// console.log(nextId([0, 1, 2, 3, 5])); // 4
+// console.log(nextId([0, 3, 3, 5, 1, 2, 3, 3, 3, 5])); // 4
+// console.log(nextId([])); // 0
+// console.log(nextId([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // 11
+
+// Task -fake Bi
+
+function fakeBin(x) {
+  let resultArray = [];
+
+  for (let i = 0; i < x.length; i++) {
+    resultArray[i] = x[i] < 5 ? 0 : 1;
+  }
+  return resultArray.join("");
+}
+
+// console.log(fakeBin("45385593107843568")); // "01011110001100111"
+// console.log(fakeBin("509321967506747")); // "101000111101101"
+// console.log(fakeBin("366058562030849490134388085")); // "011011110000101010000011011"
+
+// Task - First letters
+
+function fix(paragraph) {
+  return paragraph
+    .split(". ")
+    .map((el) => el[0].toUpperCase() + el.slice(1))
+    .join(". ");
+}
+
+// console.log(
+//   fix("hello. my name is inigo montoya. you killed my father. prepare to die.")
+// ); // "Hello. My name is inigo montoya. You killed my father. Prepare to die."
+
+// Task - eviternity numbers :)
+
+// function solve(a, b) {
+//   let count = 0;
+//   console.log((16).toString());
+
+//   for (let i = a; i <= b; i++) {
+//     if (i.toString().) {
+//     }
+//   }
+// }
+
+// console.log(solve(0, 100)); // 4
+// console.log(solve(0, 1000)); // 14
+// console.log(solve(0, 10000)); // 37
+// console.log(solve(0, 100000)); // 103
+// console.log(solve(0, 500000)); // 148
+
+function arithmetic(a, b, operator) {
+  let result;
+  switch (operator) {
+    case "add":
+      result = a + b;
+      break;
+
+    case "subtract":
+      result = a - b;
+      break;
+
+    case "multiply":
+      result = a * b;
+      break;
+
+    case "divide":
+      result = a / b;
+      break;
+  }
+  return result;
+}
+
+// console.log(arithmetic(1, 2, "add")); // 3, "'add' should return the two numbers added together!"
+// console.log(arithmetic(8, 2, "subtract")); // 6, "'subtract' should return a minus b!"
+// console.log(arithmetic(5, 2, "multiply")); // 10, "'multiply' should return a multiplied by b!"
+// console.log(arithmetic(8, 2, "divide")); // 4, "'divide' should return a divided by b!"
