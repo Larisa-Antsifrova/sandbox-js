@@ -1,37 +1,28 @@
-// add function
-function add(...args) {
-  if (args.length > 1) {
-    return args[0] + args[1];
-  }
+// Unique pairs function
+const array = [1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 4, 4];
 
-  return function (m) {
-    return m + args[0];
-  };
+function rearrangePairs(array) {
+  const result = [];
+  const buffer = [];
+  let counter = 0;
+  let prevValue = null;
+
+  array.forEach(element => {
+    if (element !== prevValue) {
+      counter = 1;
+      result.push(element);
+    } else if (element === prevValue && !(counter > 1)) {
+      counter += 1;
+      result.push(element);
+    } else if (element === prevValue && counter > 1) {
+      buffer.push(element);
+    }
+
+    prevValue = element;
+    console.log('counter', counter);
+  });
+  console.log('buffer', buffer);
+  return result;
 }
 
-// console.log(add(1, 2));
-// console.log(add(1)(2));
-
-// Nesting level calculator
-const appRef = document.getElementById('app');
-
-function calculateMaxNestingDepth(htmlRef, currentLevel = 0) {
-  if (!htmlRef.children.length) {
-    return currentLevel;
-  }
-
-  currentLevel += 1;
-  let maxDepth = currentLevel;
-
-  Array.from(htmlRef.children).forEach(
-    element =>
-      (maxDepth = Math.max(
-        calculateMaxNestingDepth(element, currentLevel),
-        maxDepth,
-      )),
-  );
-
-  return maxDepth;
-}
-
-// console.log(calculateMaxNestingDepth(appRef));
+console.log(rearrangePairs(array));
