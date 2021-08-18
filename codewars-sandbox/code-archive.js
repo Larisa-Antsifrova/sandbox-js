@@ -42,3 +42,20 @@ function solution(number) {
 }
 
 console.log(solution(10.5));
+
+var splitInParts = function (s, partLength) {
+  let begin = 0;
+  let end = partLength;
+
+  const result = [];
+
+  do {
+    result.push(s.slice(begin, end));
+    begin = end;
+    end += partLength;
+  } while (begin < s.length);
+
+  return result.join(' ');
+};
+
+console.log(splitInParts('supercalifragilisticexpialidocious', 3)); // "sup erc ali fra gil ist ice xpi ali doc iou s"
