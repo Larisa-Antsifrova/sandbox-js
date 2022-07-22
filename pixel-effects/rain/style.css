@@ -1,5 +1,7 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   background-color: #000000;
 }
 
@@ -10,5 +12,5 @@ body {
   width: 800px;
   height: 450px;
   transform: translate(-50%, -50%);
-  border: 3px solid #ffffff;
+  border: 2px solid #ffffff;
 }
