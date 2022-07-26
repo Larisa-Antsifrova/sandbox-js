@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #000000;
+}
+
+#canvas1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 325px;
+  height: 384px;
+  transform: translate(-50%, -50%);
+  border: 2px solid #ffffff;
+}
