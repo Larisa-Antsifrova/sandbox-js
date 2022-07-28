@@ -54,18 +54,25 @@ function drawImageOnCanvas() {
       this.size = Math.random() * 0.5 + 1;
       this.positionY = Math.floor(this.y);
       this.positionX = Math.floor(this.x);
+      this.angle = 0;
     }
 
     update() {
       this.positionY = Math.floor(this.y);
       this.positionX = Math.floor(this.x);
 
-      this.speed = mappedImage[this.positionY]?.[this.positionX]?.[0];
+      if (
+        mappedImage[this.positionY] &&
+        mappedImage[this.positionY]?.[this.positionX]
+      ) {
+        this.speed = mappedImage[this.positionY]?.[this.positionX]?.[0];
+      }
 
       let movement = 2.5 - this.speed + this.velocity;
+      this.angle += this.speed / 20;
 
-      this.y += movement;
-      this.x += movement;
+      this.y += movement + Math.sin(this.angle) * 2;
+      this.x += movement + Math.cos(this.angle) * 2;
 
       if (this.y >= canvas.height) {
         this.y = 0;
@@ -80,7 +87,13 @@ function drawImageOnCanvas() {
 
     draw() {
       ctx.beginPath();
-      ctx.fillStyle = mappedImage[this.positionY]?.[this.positionX]?.[1];
+      if (
+        mappedImage[this.positionY] &&
+        mappedImage[this.positionY]?.[this.positionX]
+      ) {
+        ctx.fillStyle = mappedImage[this.positionY]?.[this.positionX]?.[1];
+      }
+
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
       ctx.fill();
     }
