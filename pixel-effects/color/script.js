@@ -10,12 +10,23 @@ function drawImageOnCanvas() {
   canvas.width = 325;
   canvas.height = 384;
 
+  const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+  gradient.addColorStop(0.2, "pink");
+  gradient.addColorStop(0.3, "red");
+  gradient.addColorStop(0.4, "orange");
+  gradient.addColorStop(0.5, "yellow");
+  gradient.addColorStop(0.6, "green");
+  gradient.addColorStop(0.7, "turquoise");
+  gradient.addColorStop(0.8, "violet");
+
+  const letters = ["G", "I", "R", "L"];
+
   ctx.drawImage(myImage, 0, 0, canvas.width, canvas.height);
   const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   let particlesArray = [];
-  const numberOfParticles = 5000;
+  const numberOfParticles = 3000;
 
   let mappedImage = [];
 
@@ -55,6 +66,8 @@ function drawImageOnCanvas() {
       this.positionY = Math.floor(this.y);
       this.positionX = Math.floor(this.x);
       this.angle = 0;
+      this.letter = letters[Math.floor(Math.random() * letters.length)];
+      this.random = Math.random();
     }
 
     update() {
@@ -70,6 +83,7 @@ function drawImageOnCanvas() {
 
       let movement = 2.5 - this.speed + this.velocity;
       this.angle += this.speed / 20;
+      this.size = this.speed * 1.5;
 
       this.y += movement + Math.sin(this.angle) * 2;
       this.x += movement + Math.cos(this.angle) * 2;
@@ -92,9 +106,17 @@ function drawImageOnCanvas() {
         mappedImage[this.positionY]?.[this.positionX]
       ) {
         ctx.fillStyle = mappedImage[this.positionY]?.[this.positionX]?.[1];
+        ctx.strokeStyle = mappedImage[this.positionY]?.[this.positionX]?.[1];
       }
 
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      // ctx.fillStyle = gradient;
+      // ctx.strokeRect(this.x, this.y, this.size * 1.5, this.size * 1.5);
+      if (this.random < 0.1) {
+        ctx.fillText(this.letter, this.x, this.y);
+      } else {
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      }
+
       ctx.fill();
     }
   }
@@ -115,7 +137,8 @@ function drawImageOnCanvas() {
 
     for (let i = 0; i < particlesArray.length; i++) {
       particlesArray[i].update();
-      ctx.globalAlpha = particlesArray[i].speed * 0.5;
+      // ctx.globalAlpha = particlesArray[i].speed * 0.5;
+      ctx.globalAlpha = 1;
       particlesArray[i].draw();
     }
 
