@@ -20,6 +20,16 @@ function drawImageOnCanvas() {
   gradient.addColorStop(0.8, "violet");
 
   const letters = ["G", "I", "R", "L"];
+  let switcher = 1;
+  let counter = 0;
+
+  setInterval(() => {
+    counter++;
+
+    if (counter % 12 === 0) {
+      switcher *= -1;
+    }
+  }, 500);
 
   ctx.drawImage(myImage, 0, 0, canvas.width, canvas.height);
   const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height);
@@ -85,16 +95,27 @@ function drawImageOnCanvas() {
       this.angle += this.speed / 20;
       this.size = this.speed * 1.5;
 
-      this.y += movement + Math.sin(this.angle) * 2;
+      // if (switcher === 1) {
+      //   ctx.globalCompositeOperation = "luminosity";
+      // } else {
+      //   ctx.globalCompositeOperation = "soft-light";
+      // }
+
+      // if (counter % 10 === 0) {
+      //   this.x = 0;
+      //   this.y = 0;
+      // }
+
+      this.y -= movement;
       this.x += movement + Math.cos(this.angle) * 2;
 
-      if (this.y >= canvas.height) {
-        this.y = 0;
+      if (this.y <= 0) {
+        this.y = canvas.height;
         this.x = Math.random() * canvas.width;
       }
 
       if (this.x >= canvas.width) {
-        this.x = 0;
+        this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
       }
     }
