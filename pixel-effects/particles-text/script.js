@@ -24,3 +24,14 @@ ctx.fillText("A", 0, 40);
 ctx.strokeStyle = "white";
 ctx.strokeRect(0, 0, 100, 100);
 const data = ctx.getImageData(0, 0, 100, 100);
+
+class Particle {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.size = 3;
+    this.baseX = this.x;
+    this.baseY = this.y;
+    this.desity = Math.random() * 30 + 1;
+  }
+}
