@@ -9,7 +9,7 @@ let particlesArray = [];
 const mouse = {
   x: null,
   y: null,
-  radius: 150,
+  radius: 50,
 };
 
 window.addEventListener("mousemove", function (event) {
@@ -32,7 +32,7 @@ class Particle {
     this.size = 3;
     this.baseX = this.x;
     this.baseY = this.y;
-    this.desity = Math.random() * 30 + 1;
+    this.density = Math.random() * 30 + 1;
   }
 
   draw() {
@@ -47,11 +47,26 @@ class Particle {
     let dx = mouse.x - this.x;
     let dy = mouse.y - this.y;
     let distance = Math.sqrt(dx * dx + dy * dy);
+    let forceDirectionX = dx / distance;
+    let forceDirectionY = dy / distance;
+    let maxDistance = mouse.radius;
+    let force = (maxDistance - distance) / maxDistance;
+    let directionX = forceDirectionX * force * this.density;
+    let directionY = forceDirectionY * force * this.density;
 
-    if (distance < 100) {
-      this.size = 50;
+    if (distance < mouse.radius) {
+      this.x -= directionX;
+      this.y -= directionY;
     } else {
-      this.size = 3;
+      if (this.x !== this.baseX) {
+        let dx = this.x - this.baseX;
+        this.x -= dx / 10;
+      }
+
+      if (this.y !== this.baseY) {
+        let dy = this.y - this.baseY;
+        this.y -= dy / 10;
+      }
     }
   }
 }
