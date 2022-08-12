@@ -4,6 +4,9 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+let adjustX = 10;
+let adjustY = -10;
+
 let particlesArray = [];
 
 const mouse = {
@@ -19,7 +22,7 @@ window.addEventListener("mousemove", function (event) {
 
 ctx.fillStyle = "white";
 ctx.font = "30px Verdana";
-ctx.fillText("A", 0, 40);
+ctx.fillText("Ask", 0, 40);
 
 ctx.strokeStyle = "white";
 ctx.strokeRect(0, 0, 100, 100);
@@ -78,8 +81,8 @@ function init() {
       if (
         textCoordinates.data[y * 4 * textCoordinates.width + x * 4 + 3] > 128
       ) {
-        let positionX = x;
-        let positionY = y;
+        let positionX = x + adjustX;
+        let positionY = y + adjustY;
 
         particlesArray.push(new Particle(positionX * 10, positionY * 10));
       }
