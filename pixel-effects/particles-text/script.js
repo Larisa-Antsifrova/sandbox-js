@@ -22,7 +22,7 @@ window.addEventListener("mousemove", function (event) {
 
 ctx.fillStyle = "white";
 ctx.font = "30px Verdana";
-ctx.fillText("Ask", 0, 40);
+ctx.fillText("A", 0, 40);
 
 ctx.strokeStyle = "white";
 ctx.strokeRect(0, 0, 100, 100);
@@ -84,7 +84,7 @@ function init() {
         let positionX = x + adjustX;
         let positionY = y + adjustY;
 
-        particlesArray.push(new Particle(positionX * 10, positionY * 10));
+        particlesArray.push(new Particle(positionX * 20, positionY * 20));
       }
     }
   }
@@ -99,8 +99,29 @@ function animate() {
     particlesArray[i].draw();
     particlesArray[i].update();
   }
-
+  connect();
   requestAnimationFrame(animate);
 }
 
 animate();
+
+function connect() {
+  let opacity = 1;
+  for (let a = 0; a < particlesArray.length; a++) {
+    for (let b = a; b < particlesArray.length; b++) {
+      let dx = particlesArray[a].x - particlesArray[b].x;
+      let dy = particlesArray[a].y - particlesArray[b].y;
+      let distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < 50) {
+        opacity = 1 - distance / 50;
+        ctx.strokeStyle = "rgb(255,255,255," + opacity + ")";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+        ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+        ctx.stroke();
+      }
+    }
+  }
+}
