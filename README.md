@@ -1,3 +1,1 @@
 # sandbox-js
-
-## Commit testing
