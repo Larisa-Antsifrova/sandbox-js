@@ -3,4 +3,3 @@
 - Pixel Effects
 - JS Core examples
 
-## Testing commits
