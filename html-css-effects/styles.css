@@ -9,7 +9,7 @@ html,body{
     height: 100%;
 }
 
-body{
+body {
     background-color: #000;
 }
 
@@ -35,6 +35,10 @@ body{
 }
 
 .wave-btn__text {
+    font-family: Arial;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 8px;
 
 }
 
