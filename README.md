@@ -1,5 +1,6 @@
 # sandbox-js
 
 - Pixel Effects
-- JS Core examples
+- JS Core Examples
+- CSS + HTML Effects
 
