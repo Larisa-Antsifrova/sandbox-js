@@ -24,6 +24,7 @@ body {
 }
 
 .wave-btn {
+    position: relative;
     width: 280px;
     height: 60px;
     display: flex;
