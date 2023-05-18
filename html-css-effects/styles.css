@@ -60,4 +60,6 @@ body {
     left: 50%;
     height: 250%;
     width: 250%;
+
+    transform: translate3d(-50%,-96%,0) rotate(0deg) scale(1);
 }
