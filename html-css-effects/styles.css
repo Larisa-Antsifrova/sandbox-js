@@ -63,3 +63,13 @@ body {
 
     transform: translate3d(-50%,-96%,0) rotate(0deg) scale(1);
 }
+
+.wave-btn__waves:before {
+    background-color: #000000;
+    border-radius: 48%;
+}
+
+.wave-btn__waves:after {
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 44%;
+}
