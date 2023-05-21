@@ -67,9 +67,11 @@ body {
 .wave-btn__waves:before {
     background-color: #000000;
     border-radius: 48%;
+    animation: waves 5s infinite linear;
 }
 
 .wave-btn__waves:after {
     background-color: rgba(0,0,0,0.5);
     border-radius: 44%;
+    animation: waves 10s infinite linear;
 }
