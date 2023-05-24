@@ -3,5 +3,3 @@
 - Pixel Effects
 - JS Core Examples
 - CSS + HTML Effects
-
-- Travel commit
