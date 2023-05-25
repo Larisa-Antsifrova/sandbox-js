@@ -75,3 +75,9 @@ body {
     border-radius: 44%;
     animation: waves 10s infinite linear;
 }
+
+@keyframes waves {
+    0%{}
+    50%{}
+    100%{}
+}
