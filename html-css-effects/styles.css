@@ -77,7 +77,11 @@ body {
 }
 
 @keyframes waves {
-    0%{}
-    50%{}
-    100%{}
+    0%{
+        transform: translate3d(-50%,-96%,0) rotate(0deg) scale(1);
+    }
+
+    100%{
+        transform: translate3d(-50%,-96%,0) rotate(360deg) scale(1);
+    }
 }
