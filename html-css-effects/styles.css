@@ -33,6 +33,7 @@ body {
     border-radius: 0 0 10px 10px;
     transition: all 0.8s ease 0s;
     text-decoration: none;
+    overflow: hidden;
 }
 
 .wave-btn__text {
@@ -46,6 +47,8 @@ body {
 
 .wave-btn__waves {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 280px;
     height: 280px;
     background-color: #4973ff;
