@@ -36,6 +36,10 @@ body {
     overflow: hidden;
 }
 
+.wave-btn:hover .wave-btn__waves {
+    top: -50px;
+}
+
 .wave-btn__text {
     font-family: Arial;
     color: #ffffff;
@@ -53,6 +57,7 @@ body {
     height: 280px;
     background-color: #4973ff;
     box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+    transition: all 0.8s ease 0s;
 }
 
 .wave-btn__waves:after,
