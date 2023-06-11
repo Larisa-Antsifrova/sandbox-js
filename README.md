@@ -2,5 +2,5 @@
 
 - Pixel Effects
 - JS Core Examples
-- CSS + HTML Effects
-- HTML radio buttons
+- CSS + HTML Waves Button
+- CSS + HTML Squares Button
