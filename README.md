@@ -3,4 +3,4 @@
 - Pixel Effects
 - JS Core Examples
 - CSS + HTML Waves Button
-- CSS + HTML Squares Button
+- CSS + HTML Geometry Button
