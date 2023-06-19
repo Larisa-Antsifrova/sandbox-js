@@ -10,7 +10,10 @@ html, body {
 }
 
 .button {
-
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
 }
 
 .button__text {
