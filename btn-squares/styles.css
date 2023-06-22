@@ -17,5 +17,17 @@ html, body {
 }
 
 .button__text {
-
+    position: relative;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    border-radius: 50px;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.3);
+    letter-spacing: 10px;
+    transition: all 1s ease 0s;
+    top:0;
 }
