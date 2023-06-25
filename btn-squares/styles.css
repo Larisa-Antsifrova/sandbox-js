@@ -30,4 +30,15 @@ html, body {
     letter-spacing: 10px;
     transition: all 1s ease 0s;
     top:0;
+    overflow: hidden;
+}
+
+.button__text:after,
+.button__text:before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: #eeeeee;
+
 }
