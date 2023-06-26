@@ -40,5 +40,13 @@ html, body {
     width: 50%;
     height: 100%;
     background-color: #eeeeee;
+}
 
+.button__text:before {
+    left: 0;
+    z-index: 2;
+}
+
+.button__text:after {
+    right: 0;
 }
