@@ -7,3 +7,4 @@
 
 ## Plan
 - Scroll
+- Animations
