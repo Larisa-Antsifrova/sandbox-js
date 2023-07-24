@@ -9,3 +9,4 @@
 - Scroll
 - Animations
 - CSS functions
+- New CSS properties
