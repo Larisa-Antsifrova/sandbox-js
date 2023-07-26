@@ -11,3 +11,4 @@
 - CSS functions
 - New CSS properties
 - State of CSS
+- State of JS
