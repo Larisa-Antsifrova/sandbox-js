@@ -8,6 +8,3 @@
 ## Plan
 - Scroll
 - Animations
-- CSS functions
-- State of CSS
-- State of JS
