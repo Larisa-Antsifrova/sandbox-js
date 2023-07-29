@@ -8,3 +8,4 @@
 ## Plan
 - Scroll
 - Animations
+- CSS functions
