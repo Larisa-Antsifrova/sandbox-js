@@ -10,3 +10,6 @@
 - Animations
 - CSS functions
 - State of CSS
+
+## Sources
+- [Odin](https://www.theodinproject.com/paths/full-stack-javascript/courses/advanced-html-and-css)
