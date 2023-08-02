@@ -9,6 +9,7 @@
 - Scroll
 - Animations
 - CSS functions
+- Visual effects
 - State of CSS
 - State of JS
 
