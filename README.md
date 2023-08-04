@@ -12,7 +12,6 @@
 - Visual effects
 - State of CSS
 - State of JS
-- Procrastination commit
 
 ## Sources
 - [Odin](https://www.theodinproject.com/paths/full-stack-javascript/courses/advanced-html-and-css)
