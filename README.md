@@ -18,3 +18,5 @@
 - Fee Code Camp
 - Wess Boss - CSS Grid
 - NetNinja
+- Udemy
+- CSS Docs
