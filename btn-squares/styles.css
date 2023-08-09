@@ -1,0 +1,52 @@
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+
+.button__text {
+    position: relative;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    border-radius: 50px;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.3);
+    letter-spacing: 10px;
+    transition: all 1s ease 0s;
+    top:0;
+    overflow: hidden;
+}
+
+.button__text:after,
+.button__text:before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: #eeeeee;
+}
+
+.button__text:before {
+    left: 0;
+    z-index: 2;
+}
+
+.button__text:after {
+    right: 0;
+}
