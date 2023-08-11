@@ -22,4 +22,5 @@
 - SASS Docs
 - CSS Docs
 - BEM Docs
+- Commit to delay desicions
 
