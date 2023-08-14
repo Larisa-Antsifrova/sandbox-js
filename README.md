@@ -22,5 +22,4 @@
 - Udemy
 - SASS Docs
 - CSS Docs
-- BEM Docs
 
