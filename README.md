@@ -13,6 +13,7 @@
 - State of CSS
 - State of JS
 - CSS Architecture
+- CSS Philosofies
 
 ## Sources
 - [Odin](https://www.theodinproject.com/paths/full-stack-javascript/courses/advanced-html-and-css)
@@ -22,4 +23,5 @@
 - Udemy
 - SASS Docs
 - CSS Docs
+- Tailwind
 
