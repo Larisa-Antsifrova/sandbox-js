@@ -13,6 +13,7 @@
 - State of CSS
 - State of JS
 - CSS Architecture
+- Frontend patterns
 
 ## Sources
 - [Odin](https://www.theodinproject.com/paths/full-stack-javascript/courses/advanced-html-and-css)
