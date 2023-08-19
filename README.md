@@ -10,10 +10,7 @@
 - Animations
 - CSS functions
 - Visual effects
-- State of CSS
-- State of JS
 - CSS Architecture
-- Frontend patterns
 
 ## Sources
 - [Odin](https://www.theodinproject.com/paths/full-stack-javascript/courses/advanced-html-and-css)
@@ -25,4 +22,7 @@
 - CSS Docs
 - Tailwind
 - Bootstrap
+- State of CSS
+- State of JS
+- Frontend patterns
 
