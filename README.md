@@ -7,7 +7,7 @@
 
 ## Plan
 - Scroll
-- Animations
+- CSS Animations
 - CSS functions
 - Visual effects
 - CSS Architecture
