@@ -26,4 +26,5 @@
 - State of JS
 - Frontend patterns
 - CSS Tricks
+- Web Standards
 
