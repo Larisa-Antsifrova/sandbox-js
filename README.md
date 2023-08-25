@@ -28,5 +28,4 @@
 - CSS Tricks
 - Web Standards
 - Doka
-- Smashing Magazine
 
