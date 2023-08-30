@@ -32,4 +32,5 @@
 - Web Standards
 - Doka
 - MUI
+- Figma lectures
 
