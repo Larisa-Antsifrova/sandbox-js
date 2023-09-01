@@ -33,5 +33,5 @@
 - Web Standards
 - Doka
 - MUI
-- Figma lectures
+- Figma Conference
 
