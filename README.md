@@ -16,6 +16,7 @@
 - Design Systems
 - Design tokens
 - Figma
+- HTML5
 
 ## Sources
 - [Odin](https://www.theodinproject.com/paths/full-stack-javascript/courses/advanced-html-and-css)
