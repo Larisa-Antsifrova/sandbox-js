@@ -31,7 +31,6 @@
 - State of JS
 - Frontend patterns
 - CSS Tricks
-- Doka
 - MUI
 - Figma Conference
 - Existential Crisis
