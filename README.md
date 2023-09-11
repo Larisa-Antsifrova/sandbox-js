@@ -33,6 +33,5 @@
 - CSS Tricks
 - MUI
 - Figma Conference
-- Existential Crisis
 - UI Kit
 
