@@ -12,6 +12,7 @@
 - CSS functions
 - Visual effects
 - CSS Architecture
+- CSS Approaches
 - A11y
 - Design Systems
 - Design tokens
