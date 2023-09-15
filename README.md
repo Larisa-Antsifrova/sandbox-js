@@ -28,7 +28,6 @@
 - Fee Code Camp
 - Wess Boss - CSS Grid
 - NetNinja
-- Udemy
 - SASS Docs
 - CSS Docs
 - Tailwind
