@@ -38,4 +38,3 @@
 - MUI
 - Systems
 - Figma Conference
-- UI Kit
