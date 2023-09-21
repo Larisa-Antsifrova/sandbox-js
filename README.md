@@ -8,7 +8,7 @@
 - UI/UX Learning
 
 ## Plan
-
+- Figma
 - Scroll
 - CSS Animations
 - CSS functions
@@ -17,7 +17,6 @@
 - A11y
 - Design Systems
 - Design tokens
-- Figma
 - Loaders
 - UI Components
 
