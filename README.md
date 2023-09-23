@@ -8,17 +8,20 @@
 - UI/UX Learning
 
 ## Plan
-- Figma
-- Scroll
+
+- Visual effects
 - CSS Animations
 - CSS functions
-- - CSS Approaches
-- Visual effects
+- CSS Approaches
+
 - A11y
+- 
 - Design Systems
 - Design tokens
-- Loaders
+
 - UI Components
+- Scroll
+- Loaders
 
 ## Sources
 
