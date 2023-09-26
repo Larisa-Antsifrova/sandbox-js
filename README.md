@@ -34,6 +34,5 @@
 - Frontend patterns
 - CSS Tricks
 - MUI
-- Systems
 - Figma Conference
 - Designers
