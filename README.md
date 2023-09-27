@@ -28,7 +28,6 @@
 - SASS Docs
 - CSS Docs
 - Tailwind
-- Bootstrap
 - State of CSS
 - State of JS
 - Frontend patterns
