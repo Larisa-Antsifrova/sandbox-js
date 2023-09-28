@@ -29,7 +29,6 @@
 - CSS Docs
 - Tailwind
 - State of CSS
-- State of JS
 - Frontend patterns
 - CSS Tricks
 - MUI
