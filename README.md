@@ -31,6 +31,5 @@
 - State of CSS
 - Frontend patterns
 - CSS Tricks
-- MUI
 - Figma Conference
 - Designers
