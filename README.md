@@ -32,4 +32,4 @@
 - Frontend patterns
 - CSS Tricks
 - Figma Conference
-- Designers
+
