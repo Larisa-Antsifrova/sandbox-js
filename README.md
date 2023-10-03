@@ -8,7 +8,6 @@
 
 ## Plan
 
-- Visual effects
 - CSS Animations
 - CSS functions
 - CSS Approaches
