@@ -9,12 +9,11 @@
 ## Plan
 
 - CSS Animations
-- CSS functions
+- CSS Functions
 - CSS Approaches
 - A11y
 - Design Systems
-- Design tokens
-- UI Components
+- Design Tokens
 - Scroll
 - Loaders
 
