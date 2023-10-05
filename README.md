@@ -20,7 +20,6 @@
 ## Sources
 
 - [Odin](https://www.theodinproject.com/paths/full-stack-javascript/courses/advanced-html-and-css)
-- Fee Code Camp
 - SASS Docs
 - CSS Docs
 - Tailwind
