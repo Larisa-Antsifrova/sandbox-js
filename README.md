@@ -25,6 +25,5 @@
 - Tailwind
 - State of CSS
 - Frontend patterns
-- CSS Tricks
 - Figma Conference
 
