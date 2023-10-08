@@ -11,7 +11,6 @@
 - CSS Animations
 - CSS Functions
 - CSS Approaches
-- A11y
 - Design Systems
 - Design Tokens
 - Scroll
