@@ -24,5 +24,4 @@
 - State of CSS
 - Frontend patterns
 - Figma Conference
-- CSS libs
 
