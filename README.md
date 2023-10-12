@@ -11,7 +11,6 @@
 - CSS Animations
 - CSS Functions
 - CSS Approaches
-- Design Systems
 - Design Tokens
 - Scroll
 - Loaders
