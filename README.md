@@ -10,7 +10,6 @@
 
 - CSS Animations
 - CSS Functions
-- CSS Approaches
 - Design Tokens
 - Scroll
 - Loaders
