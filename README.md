@@ -20,7 +20,6 @@
 - SASS Docs
 - CSS Docs
 - State of CSS
-- State of JS
 - Frontend patterns
 - Figma Conference
 
