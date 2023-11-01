@@ -22,6 +22,7 @@
 - State of CSS
 - Frontend patterns
 - Figma Conference
+- Sessions with Designers
 
 
 
