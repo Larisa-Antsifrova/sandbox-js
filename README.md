@@ -23,6 +23,7 @@
 - Frontend patterns
 - Figma Conference
 - Sessions with Designers
+- Procrastination commit
 
 
 
