@@ -23,7 +23,7 @@
 - Frontend patterns
 - Figma Conference
 - Sessions with Designers
-- Education sessions
+
 
 
 
